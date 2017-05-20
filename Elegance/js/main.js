@@ -33,8 +33,42 @@
       slidesToShow: 1,
       adaptiveHeight: true
     });
+//     callback form fadeIn
     $('.btn_slide').click(function(){
       $('.slide').fadeIn();
     });
-     
+ //    WOW ANIMATE INITIALIZE
+    if($('.wow').length > 0 && screen.width > 768){    
+        new WOW().init();
+    }
+//    modal
+        $('.call_form').click(function(e){
+          e.preventDefault(); 
+            $('#overlay').show('fast');
+             $('.nonebox').animate({'top':'50%'},500,function(){  
+             });
+         });
+        $('.box-close.one, .overlay').click(function(e){
+          e.preventDefault(); 
+             $('.nonebox').animate({'top':'-1100px'},500,function(){ 
+                 $('.overlay').fadeOut('fast'); 
+             });
+         });
+     $('#datetimepicker').datetimepicker({
+         dayOfWeekStart: 1,
+         i18n:{
+          ru:{
+           months:[
+            'Январь','Февраль','Март','Апрель',
+            'Май','Июнь','Июль','Август',
+            'Сентябрь','Октябрь','Ноябрь','Декабрь',
+           ],
+           dayOfWeek:[
+            "Пн", "Вт", "Ср", 
+            "Чт", "Пт", "Сб", "Вс",
+           ]
+          }
+         },
+        });
+     jQuery.datetimepicker.setLocale('ru');
 });

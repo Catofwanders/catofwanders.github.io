@@ -814,7 +814,7 @@ p{
   width: 100%;
   padding-left: 30px;
 }
-#contacts .contacts_form_email {
+.contacts_form_email {
   font-size: 15px;
   color: #7b7b7b;
   border-bottom: 2px solid #7b7b7b;
@@ -835,7 +835,7 @@ p{
   padding-top: 25px;
   min-height: 120px;
 }
-#contacts .contacts_form_submit {
+.contacts_form_submit {
   width: 100%;
   height: 45px;
   color: #fff;
@@ -846,7 +846,7 @@ p{
   border: 1px solid #ffd900;
   transition: 0.3s;
 }
-#contacts .contacts_form_submit:hover{
+.contacts_form_submit:hover{
   background: #fff;
   color: #ffd900;
 }
@@ -965,3 +965,58 @@ p{
     background: url(../img/up-chevron-button.png)no-repeat;
     cursor: pointer;
 }
+/*MODAL CONTENT*/
+.overlay {
+    background-color:rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10000;
+}
+
+.nonebox{
+    position: fixed;
+    top: -350px;
+    left: 50%;
+    transform: translate(-50%,  -50%);
+    background: #fff;
+    color: #000000;
+    width: auto;
+    height: auto;
+    z-index: 99999;
+    text-align: center;
+    min-width: 540px;
+    border: 1px solid #fff;
+    padding: 20px 10px;
+}
+
+a.box-close {
+    width: 40px;
+    height: 40px;
+    background: url('../img/close.png') no-repeat center;
+    margin: -30px -30px 0px 0px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+.nonebox .form{
+    background-color: #fff;
+    padding: 25px;
+}
+div.grippie{ display: none !important; }
+.xdsoft_datetimepicker{
+    z-index: 99999!important ;
+}
+.date_input{
+    font-size: 25px;
+    color: #7b7b7b;
+    border-bottom: 2px solid #7b7b7b;
+    padding: 15px 0 10px 0px;
+    margin-bottom: 10px;
+    text-align: center
+}
+/*END MODAL CONTENT*/

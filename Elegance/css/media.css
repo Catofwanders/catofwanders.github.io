@@ -41,4 +41,11 @@
     .scroll-top{
         display: block;
     }
+    .nonebox{
+        min-width: 90%;
+    }
+    a.box-close{
+        top: 0;
+        right: 0;
+    }
 }

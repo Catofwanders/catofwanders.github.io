@@ -11,9 +11,13 @@
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" href="libs/datetimepicker/build/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="libs/animate/animate.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.js"></script>
     <script src="libs/slick/slick.js"></script>
+    <script src="libs/datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="libs/animate/wow.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body class="front">
@@ -61,7 +65,7 @@
                       <p class="top-slider_item_text_text">
                         Предоставляем полный спектр услуг визаж, стрижки, покраска.<strong>Низкие цены</strong> высокая культура обслуживания!
                       </p>
-                      <div class="top-slider_item_text_btn">
+                      <div class="top-slider_item_text_btn call_form">
                         Записаться
                       </div> 
                     </div> 
@@ -80,7 +84,7 @@
                         perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         voluptatem sequi nesciunt. <strong>Neque porro</strong> quisquam
                       </p>
-                      <div class="top-slider_item_text_btn">
+                      <div class="top-slider_item_text_btn call_form">
                         Записаться
                       </div>
                     </div> 
@@ -99,7 +103,7 @@
                         perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         voluptatem sequi nesciunt. <strong>Neque porro</strong> quisquam
                       </p>
-                      <div class="top-slider_item_text_btn">
+                      <div class="top-slider_item_text_btn call_form">
                         Записаться
                       </div> 
                     </div> 
@@ -239,5 +243,16 @@
           </footer>
           <div class="scroll-top"></div>
 <!-- end footer -->
+<div class="overlay" id="overlay" style="display:none;"></div> 
+<div class="nonebox th_form" id="call_form"> 
+    <a class="box-close one" id="box-close" href="index.html"></a>
+    <h2>Записаться</h2>
+    <form action="" id="callback">
+        <input id="datetimepicker" type="text" class="date_input" placeholder="11.11.2017">
+        <input type="text" name="name" placeholder="Как к вам обращаться? *" required value="" class="contacts_form_email">
+         <input type="text" name="phone" placeholder="Ваш телефон *" required value="" class="contacts_form_email">
+        <input type="submit" class="contacts_form_submit" value="Записаться">
+    </form>
+</div> 
 </body>
 </html>
