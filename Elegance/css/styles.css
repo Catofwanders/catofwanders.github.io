@@ -42,6 +42,9 @@ p{
 #header .main-nav {
   text-align: right;
 }
+#header .main-nav ul{
+    display: inline-block;
+}
 #header .main-nav li{
   display: inline-block;
   text-transform: uppercase;
@@ -53,7 +56,9 @@ p{
   margin-left: 20px;
   position: relative;
 }
-#header .main-nav li a.phone{
+#header .main-nav  a.phone{
+  display: inline-block;
+  margin-left: 20px;
   font-size: 34px;
   padding: 0;
   transition: 0.3s;
@@ -902,42 +907,53 @@ p{
 .slick-dots li button:before {
   font-size: 15px;
 }
-#rewiews .rewiews h3 {
+#reviews .reviews h3 {
     color: #fff;
     text-align: center;
     margin: 0;
     padding-top: 25px;
 }
-#rewiews .rewiews {
+#reviews .reviews {
     height: 70px;
     text-transform: uppercase;
     font-size: 36px;
     background: #222;
 }
-#rewiews > .container{
+#reviews > .container{
   max-width: 800px;
   margin: 0 auto;
 }
-#rewiews .slider2{
-  position: relative;;
+#reviews .slider2{
+  position: relative;
+    margin: 20px 0;
 }
-#rewiews .slider2 img {
+#reviews .slider2 img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin: 0 auto;
 }
-#rewiews .slider2 p{
+#reviews .slider2 p{
   text-align: center;
 }
-#rewiews .slider2 p.name{
+#reviews .slider2 p.name{
   font-weight: 600;
 }
-#rewiews .slider2 .slick-dots{
+#reviews .slider2 .slick-dots{
   bottom: 0;
   position: inherit;
   margin: 0;
 }
-#rewiews .slider2 .slick-dots li{
+#reviews .slider2 .slick-dots li{
   display: inline-block;
+}
+.scroll-top{
+    display: none;
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    bottom: 30px;
+    right: 20px;
+    background: url(../img/up-chevron-button.png)no-repeat;
+    cursor: pointer;
 }

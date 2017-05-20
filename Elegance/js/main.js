@@ -1,5 +1,18 @@
 
  $(document).ready(function(){
+     if($('body').hasClass('front')) {
+        $(".main-nav li a").click(function(event){
+       // event.preventDefault();
+            event.preventDefault();
+            var target = $(this.hash);
+            var product = $(target).offset().top - 0;
+            $('html, body').animate({scrollTop: product}, 1000);
+            return false;
+        });
+    }
+     $('.scroll-top').click(function(){
+         $('html, body').animate({scrollTop: 0}, 1000);
+     });
     $('.slider').slick({
       vertical: true,
       verticalSwiping: true,
@@ -23,17 +36,5 @@
     $('.btn_slide').click(function(){
       $('.slide').fadeIn();
     });
-    // $(".main-nav").on("click","a", function (event) {
-    //   //отменяем стандартную обработку нажатия по ссылке
-    //   event.preventDefault();
-
-    //   //забираем идентификатор бока с атрибута href
-    //   var id  = $(this).attr('href'),
-
-    //   //узнаем высоту от начала страницы до блока на который ссылается якорь
-    //     top = $(id).offset().top;
-      
-    //   //анимируем переход на расстояние - top за 1500 мс
-    //   $('body,html').animate({scrollTop: top}, 1500);
-    // });
+     
 });
