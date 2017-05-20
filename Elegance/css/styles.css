@@ -1,3 +1,11 @@
+a:hover,
+a:visited,
+a:active,
+a:focus{
+    text-decoration: none;
+    outline: inherit;
+    color: inherit;
+}
 body {
   color: #222;
   font-size: 13px;
