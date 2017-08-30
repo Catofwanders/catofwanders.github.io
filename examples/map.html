@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map</title>
+    <!-- Our styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="theme-color" content="#2F3BA2">
+    <style>
+        section .container {
+            position: relative;
+        }
+        .oneitem {
+            width: 350px;
+            height: 440px;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            background: #fafafa;
+            padding: 20px 0px 20px 20px;
+            overflow: auto;
+            padding-right: 10px;
+            border: 1px solid #e6e6e6;
+            box-shadow: 1px 1px 1px #fafafa;
+            z-index: 9;
+        }
+        
+        #oneitem::-webkit-scrollbar,
+        #oneitem2::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        #oneitem::-webkit-scrollbar-thumb,
+        #oneitem2::-webkit-scrollbar-thumb {
+            background-color: #efc416;
+            outline: 1px solid slategrey;
+        }
+        
+        #oneitem::-webkit-scrollbar-track,
+        #oneitem2::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        #oneitem::-webkit-scrollbar-track-piece,
+        #oneitem2::-webkit-scrollbar-track-piece {
+            background-color: #f6f6f6;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+       <a href="index.html">Главная</a>
+       <a href="map.html" class="active">Пример карты</a>
+       <a href="questions.html">Вопросы</a>
+       <a href="contacts.html">Контакты</a>
+   </nav>
+    <section>
+        <div class="container">
+            <h2>Пример оформления карты</h2>
+            <div id="map" style="height: 600px;"></div>
+            <div class="oneitem item" id="oneitem2" style="display: block;">
+                <div class="map_info">
+
+                </div>
+                <input name="id" type="hidden" value="1">
+                <input name="tit" type="hidden" value="Натяжные потолки Днепр">
+            </div>
+        </div>
+    </section>
+    <div class="cities shadow_block anim slim" style="display: none;">
+        <div class="view-content">
+            <div class="field-content">
+                <div class="item anim" id="pm1">
+                    <div class="map_info">
+                        <h3>г. Днепр</h3>
+                        <p class="map_adress"><strong>Адрес главного офиса:</strong></p>
+                        <p>Улица Береговая 1, офис 1 (ж/м Фрунзенский)</p>
+                        <p class="map_time"><strong>Время работы офиса:</strong></p>
+                        <p>Пн.- пт. с 09:00 до 18:00;<br>Сб,Вс - выходной</p>
+                        <p class="map_time"><strong>Время работы мобильного офиса (выезд технолога):</strong></p>
+                        <p>Пн.- Пт. с 09:00 до 20:00,<br>Сб. - с 10:00 до 16:00,<br>Вс. - выходной.</p>
+                        <p class="map_phone"><strong>Телефоны:</strong></p>
+                        <a href="tel:+9999999999">+9 (999) 999-99-99</a><br>
+                        <a href="tel:+9999999999">+9 (999) 999-99-99</a>
+                        <p class="map_mail"><strong>Электронная почта:</strong></p>
+                        <a class="map_mail" href="mailto:office@info.com">office@info.com</a>
+                    </div>
+                </div>
+                <div class="item anim" id="pm2">
+                    <div class="map_info">
+                        <h3>Харьков</h3>
+                        <p class="map_adress"><strong>Адрес:</strong></p>
+                        <p>Улица Рымарская 1, магазин ПЛЮС</p>
+                        <p class="map_time"><strong>Время работы офиса:</strong></p>
+                        <p>Пн - пт 10:00 до 18:00,<br> сб 11:00 до 17:00, вс - выходной</p>
+                        <p class="map_time"><strong>Время работы мобильного офиса (выезд технолога):</strong></p>
+                        <p>Пн.- Пт. с 09:00 до 20:00,<br>Сб. - с 10:00 до 16:00,<br>Вс. - выходной.</p>
+                        <p class="map_phone"><strong>Телефоны:</strong></p>
+                        <a href="tel:+9999999999">+9 (999) 999-99-99</a><br>
+                        <a href="tel:+9999999999">+9 (999) 999-99-99</a>
+                        <p class="map_mail"><strong>Электронная почта:</strong></p>
+                        <a class="map_mail" href="mailto:office@info.com">office@info.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg-eZj9ONzBdjOyryP6f4ZDeocVb95r0A&callback=initMap" async defer></script>
+<script>
+    $(document).ready(function() {
+        switch (true) {
+            case $(location).attr('href') === 'http://sahar.biz/ua/dnepr/map/' || $(location).attr('href') === 'http://sahar.biz/dnepr/map/' ||
+            $(location).attr('href') === 'http://sahar.biz/ua/dnepr/' || $(location).attr('href') === 'http://sahar.biz/dnepr/': // Днепр
+                defaultId = 2;
+                break;
+            case $(location).attr('href') === 'http://sahar.biz/ua/novomoskovsk/map/' || $(location).attr('href') === 'http://sahar.biz/novomoskovsk/map/' ||
+            $(location).attr('href') === 'http://sahar.biz/ua/novomoskovsk/' || $(location).attr('href') === 'http://sahar.biz/novomoskovsk/': // Новомосковск
+                defaultId = 12;
+                console.log('aaa');
+                break;
+            default:
+                defaultId = 1;
+        }
+        el = jQuery('#pm' + defaultId);
+        jQuery('.oneitem').slideUp(150);
+        jQuery('.cities').addClass('slim');
+        jQuery('#map').addClass('movedup');
+        setTimeout(function() {
+            jQuery('.oneitem').html(el.html());
+            jQuery('.oneitem').slideDown(300);
+        }, 60);
+        //        map page 
+        if ($('.node-type-info-map').length > 0) {
+            $('.all_offices ul li').removeClass("active");
+            switch (true) {
+                case $(location).attr('href') === 'http://sahar.biz/ua/dnepr/map/' || $(location).attr('href') === 'http://sahar.biz/dnepr/map/': // Днепр
+                    $('.all_offices ul li:nth-child(1)').addClass("active");
+                    break;
+                case $(location).attr('href') === 'http://sahar.biz/ua/kharkiv/map/' || $(location).attr('href') === 'http://sahar.biz/kharkiv/map/': // Харьков
+                    $('.all_offices ul li:nth-child(2)').addClass("active");
+                    break;
+            }
+        }
+    });
+
+    function initMap() {
+        /**
+         *  Параметры нашей карты метки их id и пр
+         * */
+        var image = 'http://sahar.biz/sites/all/themes/sahar/img/map_inactive.png';
+        var image2 = 'http://sahar.biz/sites/all/themes/sahar/img/map_active.png';
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            center: new google.maps.LatLng(48.9615404, 26.853100),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+        });
+        var locations = [
+            ['Днепр', 48.505331, 34.994420, 1],
+            ['Харьков', 49.995694, 36.231472, 2],
+        ];
+        var markers = [];
+        var marker, i;
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: image,
+                id: locations[i][3]
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {}
+            })(marker, i));
+
+            google.maps.event.addDomListener(window, 'load', function() {
+                switch (true) {
+                    case jQuery(location).attr('href') === 'http://sahar.biz/ua/dnepr/' || jQuery(location).attr('href') === 'http://sahar.biz/dnepr/': // Днепр
+                        defaultId = 1 - 1;
+                        break;
+                    case jQuery(location).attr('href') === 'http://sahar.biz/ua/kharkiv/' || jQuery(location).attr('href') === 'http://sahar.biz/kharkiv/': // Харьков
+                        defaultId = 2 - 1;
+                        break;
+                    default:
+                        defaultId = 1 - 1;
+                }
+                for (var j = 0; j < markers.length; j++) {
+                    markers[defaultId].setIcon(image2);
+                }
+            });
+            /**
+             * Логика кликов по маркеру
+             * */
+            marker.addListener('click', function() {
+                map.setCenter(this.getPosition());
+                var current = this.id;
+                for (var j = 0; j < markers.length; j++) {
+                    markers[j].setIcon(image);
+                }
+                this.setIcon(image2);
+                el = jQuery('#pm' + current);
+                jQuery('.oneitem').slideUp(150);
+                jQuery('.cities').addClass('slim');
+                jQuery('#map').addClass('movedup');
+                setTimeout(function() {
+                    jQuery('.oneitem').html(el.html());
+                    jQuery('.oneitem').slideDown(300);
+                }, 60);
+            });
+            markers.push(marker);
+        }
+    }
+</script>
+
+</html>
