@@ -1,0 +1,51 @@
+@media (max-width: 1000px){
+	.container {
+   		 width: 100% !important;
+	}
+	.our-course_item,
+	.begin_item{
+		width: initial;
+	}
+	.about-facts_item{
+		width: 100%;
+	}
+	#header{
+		text-align: center;
+	}
+	.right{
+		float: none;
+	}
+	.header_forms_title img{
+		position: initial;
+	}
+	.you_know.right{
+		float: right;
+	}
+	#client-choice{
+		text-align: center;
+	}
+	.client_choice_item h3:after{
+		margin: 0 auto;
+	}
+	#footer,
+	.footer_tel{
+		text-align: center;
+	}
+	.footer_info {
+	    padding: 30px;
+	}
+	.footer_tel {
+		padding: 0;
+		padding-bottom: 20px;
+	}
+	.client_choice_item_btn{
+		margin-bottom: 20px;
+	}
+	.client_choice_item.line:after {
+	    right: 50%;
+	    top: 50px;
+	    width: 1px;
+	    height: 100%;
+	    transform: rotate(90deg);
+	}
+}
