@@ -1,0 +1,138 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-download_icon {
+  background-image: url(sprite.png);
+  background-position: -204px -42px;
+  width: 32px;
+  height: 32px;
+}
+.icon-facebook-logo {
+  background-image: url(sprite.png);
+  background-position: -162px -42px;
+  width: 32px;
+  height: 32px;
+}
+.icon-facebook-logo_h {
+  background-image: url(sprite.png);
+  background-position: 0px -42px;
+  width: 32px;
+  height: 32px;
+}
+.icon-identity-card-layout {
+  background-image: url(sprite.png);
+  background-position: -42px -42px;
+  width: 32px;
+  height: 32px;
+}
+.icon-linkedin-logo {
+  background-image: url(sprite.png);
+  background-position: -120px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-linkedin-logo_h {
+  background-image: url(sprite.png);
+  background-position: -120px -42px;
+  width: 32px;
+  height: 32px;
+}
+.icon-mail {
+  background-image: url(sprite.png);
+  background-position: 0px -84px;
+  width: 32px;
+  height: 32px;
+}
+.icon-mail_h {
+  background-image: url(sprite.png);
+  background-position: -42px -84px;
+  width: 32px;
+  height: 32px;
+}
+.icon-old-handphone {
+  background-image: url(sprite.png);
+  background-position: -84px -84px;
+  width: 32px;
+  height: 32px;
+}
+.icon-poland {
+  background-image: url(sprite.png);
+  background-position: -162px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-russia {
+  background-image: url(sprite.png);
+  background-position: -78px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-share {
+  background-image: url(sprite.png);
+  background-position: -162px -84px;
+  width: 32px;
+  height: 32px;
+}
+.icon-share_h {
+  background-image: url(sprite.png);
+  background-position: 0px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-skype-logo {
+  background-image: url(sprite.png);
+  background-position: -42px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-skype-logo_h {
+  background-image: url(sprite.png);
+  background-position: -84px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-smartphone {
+  background-image: url(sprite.png);
+  background-position: -126px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-smartphone_h {
+  background-image: url(sprite.png);
+  background-position: -204px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-sprite-018944499943365423 {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 68px;
+  height: 32px;
+}
+.icon-ukraine {
+  background-image: url(sprite.png);
+  background-position: -204px -84px;
+  width: 32px;
+  height: 32px;
+}
+.icon-united-states {
+  background-image: url(sprite.png);
+  background-position: -204px -126px;
+  width: 32px;
+  height: 32px;
+}
