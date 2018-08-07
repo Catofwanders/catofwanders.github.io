@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Batura Taras portfolio page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name='freelancehunt' content='770e1409ad08350' />
+    <link href="css/style.min.css" rel="stylesheet" media="screen">
+    <script>
+        // Маркер работающего javascript
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.isMobile !== undefined) {
+                // console.log(isMobile);
+                if (isMobile.any) {
+                    var rootClasses = ' is-mobile';
+                    for (key in isMobile) {
+                        if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses +=
+                            ' is-mobile--' + key;
+                        if (typeof isMobile[key] === 'object' && key !== 'other') {
+                            for (type in isMobile[key]) {
+                                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+                            }
+                        }
+                    }
+                    document.documentElement.className += rootClasses;
+                }
+            } else {
+                console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+            }
+        });
+    </script>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/blocks-library.css">
+</head>
+
+<body>
+    <main class="off-canvas__page-content">
+        <header>
+            <div class="container">
+                <div class="flex-row">
+                    <div class="flex-item">
+                        <div class="media">
+                            <div class="media__picture">
+                                <img src="img/me.jpg" alt="Batura Taras">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="header__info">
+                            <h1>Taras Batura</h1>
+                            <h2>Front-end developer</h2>
+                            <p>Kamenskoe Ukraine</p>
+                            <p>
+                                <strong>PREVIOUS: </strong> HTML/CSS coder
+                                <a class="label slow_scroll-js" href="#experience">View More</a>
+                            </p>
+                            <p>
+                                <strong>EDUCATION: </strong>UKRAINIAN STATE UNIVERSITY OF CHEMICAL TECHNOLOGY DNEPR
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="about_me" class="about_me">
+            <div class="container">
+                <div class="about_me__links">
+                    <a class="slow_scroll-js" href="#footer">
+                        <i class="icon information"></i>Contact Information</a>
+                    <!--                   <a href="#">Portfolio</a>-->
+                    <a href="./files/Batura_CV.docx">
+                        <i class="icon download"></i>Download Resume</a>
+                </div>
+                <div class="about_me__description">
+
+                    <div class="about_me__description__details">
+                        <h3>Personal Details</h3>
+                        <div class="flex-row">
+                            <ul>
+                                <li>
+                                    <p>BIRTHDAY:</p>
+                                    <p>1989 DECEMBER 15</p>
+                                </li>
+                                <li>
+                                    <p>MARITAL:</p>
+                                    <p>SINGLE</p>
+                                </li>
+                                <li>
+                                    <p>NATIONALITY:</p>
+                                    <p>UKRAINIAN</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>SKYPE:</p>
+                                    <p>batura_taras</p>
+                                </li>
+                                <li>
+                                    <p>PHONE:</p>
+                                    <p>
+                                        <a href="tel:+380733284457">073-328-44-57</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>EMAIL:</p>
+                                    <p>
+                                        <a href="mailto:baturataras@gmail.com">baturataras@gmail.com</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about_me__description__body">
+                        <h2>ABOUT ME</h2>
+                        <p>~1,5 year experience in front-end development: design and layout of sites, landing page, internet stores, functional, usability, testing.</p>
+                        <p>Experience in creating web-sites in Drupal/Wordpress CMS enviroment, PHP/HTML/CSS/JS/MySQL knowledge.</p>
+                        <div id="about_me__more" class="about_me__more about_me__more-hidden">
+                            <p>Love to play volleyball, guitar, singing, cooking, reading, tourism. Research new interesting things in IT. Coming to event related to this.</p>
+                        </div>
+                        <button class="btn about_me__more_btn">View More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>EXPERIENCE</h2>
+                <div class="experience__cards">
+                    <div class="flex-row">
+                        <div class="flex-item experience__cards__info">
+                            <div class="experience__cards__info__range">
+                                <span class="text-color-dark">
+                                    <span>From</span>
+                                    <strong>Feb 2017</strong>
+                                </span>
+                                <span class="text-color-dark">
+                                    <span>To</span>
+                                    <strong class="font-weight-semibold">Present</strong>
+                                </span>
+                                <p>(1 year 4 MONTHS)</p>
+                            </div>
+
+                            <div class="company__location text-color-dark">
+                                <span>PixWhite</span>
+                                <p>Web studio</p>
+                            </div>
+                        </div>
+                        <div class="flex-item experience__cards__description">
+                            <h3>Front-end developer</h3>
+                            <p>• Creating Landing Page sites/ Official company page;<br /> • Mobile/ Cross browser / Adaptive layout<br /> • Settings server/ Domain transfer
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-item experience__cards__info">
+                            <div class="experience__cards__info__range">
+                                <span class="text-color-dark">
+                                    <span>From</span>
+                                    <strong>Jul 2016</strong>
+                                </span>
+                                <span class="text-color-dark">
+                                    <span>To</span>
+                                    <strong class="font-weight-semibold">Feb 2017</strong>
+                                </span>
+                                <p>(8 MONTHS)</p>
+                            </div>
+
+                            <div class="company__location text-color-dark">
+                                <span>Webcreativ</span>
+                                <p>Web studio</p>
+                            </div>
+                        </div>
+                        <div class="flex-item experience__cards__description">
+                            <h3>HTML/CSS coder</h3>
+                            <p> •	Design  and layout of sites / Landing Page;<br />
+                                •	Settings  server/ Domain transfer<br />
+                                •	Functional  development;<br />
+                                •	Cross  Browser and Cross Platform testing;<br />
+                                •	Mobile  testing;
+                                </p>
+                        </div>
+                    </div>
+                    <div class="timeline_bar" style="top: 111.5px; bottom: 111.5px;"></div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="flex-row skills__wrapper">
+                    <div class="skills__progress">
+                        <h2>SKILLS & LANGUAGE</h2>
+                        <div class="flex-row">
+                            <div class="flex-item progress_bar">
+                                <p>HTML</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>CSS</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>JS/jQuery</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 70%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>MySQL</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 50%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>Git</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 70%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>Linux</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 60%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>React</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 40%"></span>
+                                </div>
+                            </div>
+                            <div class="flex-item progress_bar">
+                                <p>Teamwork</p>
+                                <div class="progress_bar_range">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__languages">
+                        <h3>Languages</h3>
+                        <div class="flex-row">
+                            <ul>
+                                <li>
+                                    <p class="skills__languages__country">
+                                        <i class="icon usa"></i>ENGLISH:</p>
+                                    <p>ADVANCED</p>
+                                </li>
+                                <li>
+                                    <p class="skills__languages__country">
+                                        <i class="icon poland"></i>POLISH</p>
+                                    <p>BASIC</p>
+                                </li>
+                                <li>
+                                    <p class="skills__languages__country">
+                                        <i class="icon ukraine"></i>UKRAINIAN:</p>
+                                    <p>NATIVE</p>
+                                </li>
+                                <li>
+                                    <p class="skills__languages__country">
+                                        <i class="icon russia"></i>RUSSIAN:</p>
+                                    <p>NATIVE</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>PORTFOLIO</h2>
+                <div class="grid flex-row">
+                    <!-- 1 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_sahar-full.jpg" data-fancybox="gallery" data-ref="http://sahar.biz/" title="sahar.biz">
+                            <img src="./img/port_sahar.jpg" alt="sahar">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_vsepo-full.jpg" data-fancybox="gallery" data-ref="http://vsepochinim.ru/" title="vsepochinim.ru">
+                            <img src="./img/port_vsepo.jpg" alt="vsepochinim">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_marm-full.jpg" data-fancybox="gallery" data-ref="http://www.marmoleum.su/" title="marmoleum.su">
+                            <img src="./img/port_marm.jpg" alt="marmoleum">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="img/port_maker-full.jpg" data-fancybox="gallery" data-ref="http://makerlabs.ru/" title="makerlabs.ru">
+                            <img src="img/port_maker.jpg" alt="makerlabs">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 5 -->
+                    <!-- <div class="grid-item">
+                        <a class="portfolio_work" href="img/port_uptodecor-full.jpg" data-fancybox="gallery" data-ref="http://uptodatedecorate.ru/" title="uptodatedecorate.ru">
+                            <img src="img/port_uptodecor.jpg" alt="uptodatedecorate">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div> -->
+                    <!-- 6 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_shiko-full.jpg" data-fancybox="gallery" data-ref="http://shiko34.ru/" title="shiko34.ru">
+                            <img src="img/port_shiko.jpg" alt="shiko34">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_poligraf-full.jpg" data-fancybox="gallery" data-ref="http://poligraf.city/" title="poligraf.city">
+                            <img src="./img/port_poligraf.jpg" alt="poligraf">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_termex-full.JPG" data-fancybox="gallery" data-ref="http://xn--e1aapgtjb.xn--p1acf/" title="Термекс">
+                            <img src="./img/port_termex.JPG" alt="termex">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_polimer-full.JPG" data-fancybox="gallery" data-ref="https://sintetikpolimer.ru/" title="sintetikpolimer">
+                            <img src="./img/port_polimer.JPG" alt="sinteticpolimer">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_albatroc-full.JPG" data-fancybox="gallery" data-ref="https://rent.albatroc.com/" title="rent.albatroc">
+                            <img src="./img/port_albatroc.JPG" alt="albatroc">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_realtidinsk-full.JPG" data-fancybox="gallery" data-ref="http://realtidinsk.ru/" title="realtidinsk">
+                            <img src="./img/port_realtidinsk.JPG" alt="realtidinsk">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_ridere-full.JPG" data-fancybox="gallery" data-ref="http://ridere-dent.com.ua/" title="ridere-dent">
+                            <img src="./img/port_ridere.JPG" alt="ridere">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                    <!-- 13 -->
+                    <div class="grid-item">
+                        <a class="portfolio_work" href="./img/port_gsm-full.JPG" data-fancybox="gallery" data-ref="http://gsm-climate.ru/" title="gsm">
+                            <img src="./img/port_gsm.JPG" alt="gsm">
+                        </a>
+                        <div class="portfolio_overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+                <h2>SAY HELLO</h2>
+                <div class="contacts">
+                    <div class="contact-wrapper">
+                        <span>EMAIL</span>
+                        <a href="mailto:baturataras@gmail.com">
+                            <i class="icon mail"></i>baturataras@gmail.com</a>
+                    </div>
+                    <div class="contact-wrapper">
+                        <span>PHONE</span>
+                        <a href="tel:+380733284457">
+                            <i class="icon phone"></i>073-328-44-57</a>
+                    </div>
+                    <div class="contact-wrapper">
+                        <span>SKYPE</span>
+                        <a href="skype:batura_taras?chat">
+                            <i class="icon skype"></i>batura_taras</a>
+                    </div>
+                    <div class="contact-wrapper social">
+                        <span>FOLLOW ME</span>
+                        <a href="https://www.facebook.com/taras.batura" target="_blank">
+                            <i class="icon fb"></i>Facebook</a>
+                        <a href="https://www.linkedin.com/in/taras-batura-9a258913a/" target="_blank">
+                            <i class="icon linked"></i>Linkedin</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <div class="floating-menu container">
+        <div class="floating-menu-body">
+            <div class="floating-menu-container">
+                <div class="floating-menu-row">
+                    <div class="floating-menu-column">
+                        <div class="floating-menu-row">
+                            <div class="floating-menu-nav">
+                                <button class="btn floating-menu-btn-collapse-nav" data-toggle="collapse" data-target=".floating-menu-nav-main">
+                                    <i></i>
+                                </button>
+                                <div class="floating-menu-nav-main">
+                                    <nav class="wrapper-spy">
+                                        <ul class="nav">
+                                            <li class="menu-item">
+                                                <a href="#about_me" class="text-color-dark background-color-primary">
+                                                    <i class="icon icon-1"></i>
+                                                    <span class="font-weight-bold">about_me</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#experience" class="text-color-dark background-color-primary">
+                                                    <i class="icon icon-2"></i>
+                                                    <span class="font-weight-bold">experience</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#skills" class="text-color-dark background-color-primary">
+                                                    <i class="icon icon-3"></i>
+                                                    <span class="font-weight-bold">skills</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#portfolio" class="text-color-dark background-color-primary">
+                                                    <i class="icon icon-4"></i>
+                                                    <span class="font-weight-bold">portfolio</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#footer" class="text-color-dark background-color-primary">
+                                                    <i class="icon icon-5"></i>
+                                                    <span class="font-weight-bold">contacts</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="to-top" id="toTop">↑</a>
+    <script src="js/script.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54182495-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-54182495-3');
+		</script>
+
+</body>
+
+</html>
