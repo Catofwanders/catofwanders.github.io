@@ -191,7 +191,7 @@ $(document).ready(function () {
         nextEl: '.portfolio__button-next',
         prevEl: '.portfolio__button-prev',
       },
-      effect: 'fade',
+      // effect: 'fade',
       
     };
 
