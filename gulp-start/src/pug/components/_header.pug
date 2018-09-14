@@ -1,0 +1,23 @@
+- var list = ["Homepage", "Shop", "Blog", "Lorem"]
+// HEADER :: START
+header.header
+  .container
+  .mobile-menu
+    .header__hamburger
+      .hamburger.hamburger--elastic.js-hamburger
+        .hamburger-box
+          .hamburger-inner
+    nav.mobile-nav.mobile-navi
+      ul
+        each item in list
+          li
+            a.header__menu-link(href="#")=item
+// HEADER :: END
+// NAV :: START
+nav.main-nav
+  .container
+    ul.row
+      each item in list
+        li
+          a.header__menu-link(href="#")=item
+// NAV :: END

@@ -1,0 +1,47 @@
+// FOOTER :: START
+footer.footer
+  .container
+
+// FOOTER :: END
+
+// TO TOP :: START
+div(id="back-top", class="up_btn")
+// TO TOP :: END
+
+// MODAL :: START
+
+.modal-content(id="modal-form-1" class="mfp-hide white-popup-block my-mfp-slide-bottom")
+  .popup-buble
+    .popup-dialog
+      h2 отправить запрос
+      form(action="post")
+        input(type="text", required="" placeholder="Как к Вам обращаться?")
+        input(type="text", required="" placeholder="Название компании")
+        input(type="text", required="" placeholder="Юр. лицо 1")
+        input(type="text", required="" placeholder="Сайт")
+        input(type="email", required="" placeholder="Электронная почта")
+        label.select
+          select(name="select")
+            option(value="") Категория оборудования
+            option(value="") Категория оборудования 1
+            option(value="") Категория оборудования 2
+        input(type="text", required="" placeholder="Тема оборудования")
+        input(type="text", required="" placeholder="Предполагаемый оборот в партнерстве")
+        input(type="text", required="" placeholder="Комментарий")
+        label(class="file")
+          input(type="file", name="file")
+          span(class="file__attach") <i class="icon icon-file-attach"></i> Прикрепить файл
+          span.file__name Файл не выбран
+        label(class="politics")
+          input(type="checkbox", name="checkbox", checked="", required="", hidden="")
+          p <i class="checkbox"></i>Согласен с условиями <a href="#">Политики конфиденциальности</a>
+        span(class="file__format") Разрешенные типы файлов: .txt .pdf .doc .docx .excel .png .jpg .jpeg<br>Максимальный вес файла 15мб
+        label.btn.btn--block
+          input(type="submit", value="Отправить")
+.modal-content(id="modal-form-tnx" class="mfp-hide white-popup-block my-mfp-slide-bottom modal-form-tnx")
+  .popup-buble
+    .popup-dialog
+      h2 спасибо за заявку
+      p.subtitle Мы свяжемся с вами в ближайшее время
+      a(href="#" class="btn btn--block btn--close") на страницу
+// MODAL :: END
