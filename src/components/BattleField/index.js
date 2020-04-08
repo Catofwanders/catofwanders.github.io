@@ -1,19 +1,25 @@
 import React from 'react';
 import { number } from 'prop-types';
-import Card from '../Card';
 import { BattleFieldWrap } from './styled.BattleField';
-const sizes = {
-  12: 100 / 3,
-  24: 100 / 7,
+import { generatePairs, concatArray, shuffleArray } from '../../helpers';
+import BattleCards from './BattleCards';
+
+const initialValues = {
+  same: [],
+  previousValue: null,
+  pairs: [],
 };
+
 export default function BattleField({ size }) {
-  const BattleCards = () => [...Array(size)].map((e, i) => <Card key={i} index={i} width={sizes[size]} />);
+  const pairs = generatePairs(size / 2);
+  const pairsArray = concatArray(pairs);
+  const shuffledArray = shuffleArray(pairsArray);
 
   return (
     <>
       <p>BattleField size: {size}</p>
       <BattleFieldWrap>
-        <BattleCards />
+        <BattleCards pairs={pairs} initialValues={initialValues} shuffledArray={shuffledArray} size={size} />
       </BattleFieldWrap>
     </>
   );
