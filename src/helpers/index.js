@@ -23,11 +23,11 @@ export const shuffleArray = (arr) => {
 };
 
 export const concatArray = (arr) => {
-  return [].concat.apply([], arr);
+  return [].concat(...arr);
 };
 
 export const generatePairs = (size) => {
-  let arr = [];
+  const arr = [];
   let start = 1;
   for (let i = 1; i <= size; i++) {
     arr.push([start, start + 1]);

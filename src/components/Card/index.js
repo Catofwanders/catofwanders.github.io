@@ -1,6 +1,6 @@
 import React from 'react';
-import { CardWrap } from './styled.Card';
 import { number, func, object } from 'prop-types';
+import { CardWrap } from './styled.Card';
 import { isValueInArray } from '../../helpers';
 
 export default function Card({ index, width, сlick, state }) {

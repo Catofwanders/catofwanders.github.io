@@ -1,14 +1,17 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { object, array, number, func } from 'prop-types';
 import { SIZES_LIST } from '../../helpers/lists';
 import Card from '../Card';
 import { getPair, setStateValue, isValueInArray } from '../../helpers';
 
-const BattleCards = ({ initialValues, pairs, shuffledArray, size }) => {
+const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) => {
   const [state, setState] = useState(initialValues);
 
   useEffect(() => {
-    console.log(state.pairs);
-  }, [state]);
+    if (state.pairs.length === size) {
+      setFinish(true);
+    }
+  }, [state, size, setFinish]);
 
   const cardClickHandler = useCallback(
     (id) => {
@@ -28,9 +31,17 @@ const BattleCards = ({ initialValues, pairs, shuffledArray, size }) => {
     [pairs, state]
   );
 
-  return shuffledArray.map((e, i) => (
+  return shuffledArray.map((e) => (
     <Card state={state} сlick={cardClickHandler} key={e} index={e} width={SIZES_LIST[size]} />
   ));
+};
+
+BattleCards.propTypes = {
+  initialValues: object.isRequired,
+  pairs: array.isRequired,
+  shuffledArray: array.isRequired,
+  size: number.isRequired,
+  setFinish: func.isRequired,
 };
 
 export default BattleCards;

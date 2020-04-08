@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { number } from 'prop-types';
 import { BattleFieldWrap } from './styled.BattleField';
 import { generatePairs, concatArray, shuffleArray } from '../../helpers';
@@ -11,6 +11,7 @@ const initialValues = {
 };
 
 export default function BattleField({ size }) {
+  const [finish, setFinish] = useState(false);
   const pairs = generatePairs(size / 2);
   const pairsArray = concatArray(pairs);
   const shuffledArray = shuffleArray(pairsArray);
@@ -19,7 +20,14 @@ export default function BattleField({ size }) {
     <>
       <p>BattleField size: {size}</p>
       <BattleFieldWrap>
-        <BattleCards pairs={pairs} initialValues={initialValues} shuffledArray={shuffledArray} size={size} />
+        <BattleCards
+          pairs={pairs}
+          initialValues={initialValues}
+          shuffledArray={shuffledArray}
+          size={size}
+          setFinish={setFinish}
+        />
+        {finish && <p>Finish!</p>}
       </BattleFieldWrap>
     </>
   );
