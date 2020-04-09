@@ -4,7 +4,6 @@ import { CardWrap } from './styled.Card';
 import { isValueInArray } from '../../helpers';
 
 export default function Card({ index, width, сlick, state }) {
-  console.log(state, index);
   const isActive = isValueInArray(state.pairs, index);
   const isSame = state.previousValue === index;
   return (

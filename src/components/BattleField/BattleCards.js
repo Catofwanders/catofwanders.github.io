@@ -13,6 +13,12 @@ const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) =
     }
   }, [state, size, setFinish]);
 
+  useEffect(() => {
+    if (state.previousValue) {
+      setTimeout(() => setState((prev) => setStateValue(prev, 'previousValue', null)), 3000);
+    }
+  }, [state]);
+
   const cardClickHandler = useCallback(
     (id) => {
       const pair = getPair(id, pairs);
