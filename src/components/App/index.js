@@ -5,7 +5,7 @@ import { ContentContainer } from '../globalStyle';
 function App() {
   return (
     <ContentContainer className="App">
-      <BattleField size={4} />
+      <BattleField size={16} />
     </ContentContainer>
   );
 }
