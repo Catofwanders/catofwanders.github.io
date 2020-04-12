@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import CardBack from '../../assets/img/card-back.jpg';
 
 export const CardWrap = styled.div`
   position: relative;
   width: ${({ width }) => `calc(${width}% - 2px)` || '100%'};
+  min-height: ${({ width }) => `calc(${width}vh - 20px)` || '100%px'};
   border: 1px solid #000;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100px;
   margin: 1px;
   > * {
     position: relative;
@@ -23,14 +24,14 @@ export const CardWrap = styled.div`
     width: 100%;
     height: 100%;
     transform: rotateY(0);
-    background: #ccc;
     transition: 0.5s;
+    background: url(${CardBack}) no-repeat center/cover;
   }
   &.active {
     pointer-events: none;
     &:after {
       transform: rotateY(-180deg);
-      background: skyblue;
+      background-image: ${({ image }) => `url(${image})`};
     }
   }
   p {

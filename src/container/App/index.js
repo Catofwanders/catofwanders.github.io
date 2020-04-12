@@ -1,11 +1,11 @@
 import React from 'react';
+import { ContentContainer } from '../../components/globalStyle';
 import BattleField from '../BattleField';
-import { ContentContainer } from '../globalStyle';
 
 function App() {
   return (
-    <ContentContainer className="App">
-      <BattleField size={4} />
+    <ContentContainer>
+      <BattleField />
     </ContentContainer>
   );
 }

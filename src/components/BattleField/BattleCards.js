@@ -1,32 +1,43 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { object, array, number, func } from 'prop-types';
 import { SIZES_LIST } from '../../helpers/lists';
+import { concatArray, getPair, setStateValue, isValueInArray } from '../../helpers';
 import Card from '../Card';
-import { getPair, setStateValue, isValueInArray } from '../../helpers';
 
 const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) => {
+  const [isStart, setIsStart] = useState(true);
   const [state, setState] = useState(initialValues);
 
   useEffect(() => {
-    if (state.pairs.length === size) {
+    if (isStart) {
+      const setPairs = concatArray(pairs).map((item) => item.id);
+      setState((prev) => setStateValue(prev, 'pairs', setPairs));
+      setTimeout(() => {
+        setState((prev) => setStateValue(prev, 'pairs', []));
+        setIsStart(false);
+      }, 5000);
+    }
+  }, [isStart, pairs]);
+
+  useEffect(() => {
+    if (state.pairs.length === size && !isStart) {
       setFinish(true);
     }
-  }, [state, size, setFinish]);
+  }, [state, size, setFinish, isStart]);
 
   useEffect(() => {
     if (state.previousValue) {
-      setTimeout(() => setState((prev) => setStateValue(prev, 'previousValue', null)), 3000);
+      // setTimeout(() => setState((prev) => setStateValue(prev, 'previousValue', null)), 3000);
     }
   }, [state]);
 
   const cardClickHandler = useCallback(
     (id) => {
       const pair = getPair(id, pairs);
-
       if (state.previousValue) {
         setState((prev) => setStateValue(prev, 'previousValue', null));
         if (isValueInArray(pair, state.previousValue)) {
-          setState((prev) => setStateValue(prev, 'pairs', [...state.pairs, state.previousValue, id]));
+          setState((prev) => setStateValue(prev, 'pairs', [...prev.pairs, state.previousValue, id]));
         }
       } else {
         setState((prev) => {
@@ -37,14 +48,13 @@ const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) =
     [pairs, state]
   );
 
-  return shuffledArray.map((e) => (
-    <Card state={state} сlick={cardClickHandler} key={e} index={e} width={SIZES_LIST[size]} />
+  return shuffledArray.map(({ id, image }) => (
+    <Card state={state} сlick={cardClickHandler} key={id} index={id} width={SIZES_LIST[size]} image={image} />
   ));
 };
 
 BattleCards.propTypes = {
   initialValues: object.isRequired,
-  pairs: array.isRequired,
   shuffledArray: array.isRequired,
   size: number.isRequired,
   setFinish: func.isRequired,
