@@ -11,11 +11,11 @@ const initialValues = {
 
 const BattleWrap = ({ size, images }) => {
   const [finish, setFinish] = useState(false);
+
   return (
     <>
-      <p>BattleField size: {size}</p>
       <BattleFieldWrap>
-        {images && <BattleCards initialValues={initialValues} size={size} setFinish={setFinish} {...images} />}
+        {images && <BattleCards initialValues={initialValues} setFinish={setFinish} size={size} {...images} />}
         {finish && <p>Finish!</p>}
       </BattleFieldWrap>
     </>

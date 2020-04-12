@@ -4,8 +4,8 @@ import CardBack from '../../assets/img/card-back.jpg';
 export const CardWrap = styled.div`
   position: relative;
   width: ${({ width }) => `calc(${width}% - 2px)` || '100%'};
-  min-height: ${({ width }) => `calc(${width}vh - 20px)` || '100%px'};
-  border: 1px solid #000;
+  min-height: ${({ width }) => `calc(${width}vh - ${width}px)` || '100%px'};
+  border: 5px solid #1b161d;
   padding: 20px;
   display: flex;
   justify-content: center;

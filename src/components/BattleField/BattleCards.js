@@ -12,24 +12,22 @@ const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) =
     if (isStart) {
       const setPairs = concatArray(pairs).map((item) => item.id);
       setState((prev) => setStateValue(prev, 'pairs', setPairs));
-      setTimeout(() => {
+      const clearTimeoutRef = setTimeout(() => {
         setState((prev) => setStateValue(prev, 'pairs', []));
         setIsStart(false);
       }, 5000);
+
+      return () => {
+        clearTimeout(clearTimeoutRef);
+      };
     }
   }, [isStart, pairs]);
 
   useEffect(() => {
-    if (state.pairs.length === size && !isStart) {
+    if (state.pairs.length === size * 2 && !isStart) {
       setFinish(true);
     }
   }, [state, size, setFinish, isStart]);
-
-  useEffect(() => {
-    if (state.previousValue) {
-      // setTimeout(() => setState((prev) => setStateValue(prev, 'previousValue', null)), 3000);
-    }
-  }, [state]);
 
   const cardClickHandler = useCallback(
     (id) => {
@@ -48,7 +46,7 @@ const BattleCards = ({ initialValues, pairs, shuffledArray, size, setFinish }) =
     [pairs, state]
   );
 
-  return shuffledArray.map(({ id, image }) => (
+  return shuffledArray.map(({ id, image = {} }) => (
     <Card state={state} сlick={cardClickHandler} key={id} index={id} width={SIZES_LIST[size]} image={image} />
   ));
 };
