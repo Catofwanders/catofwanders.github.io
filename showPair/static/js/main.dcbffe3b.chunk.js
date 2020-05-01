@@ -2,7 +2,7 @@
   [0],
   {
     29: function (n, e, t) {
-      n.exports = "static/media/card-back.a06220d0.jpg";
+      n.exports = "./static/media/card-back.a06220d0.jpg";
     },
     31: function (n, e, t) {
       n.exports = t(55);
