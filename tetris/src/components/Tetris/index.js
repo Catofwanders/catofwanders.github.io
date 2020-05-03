@@ -25,7 +25,6 @@ const Tetris = () => {
   };
 
   const startGame = () => {
-    console.log("test");
     // Reset everything
     setStage(createStage());
     resetPlayer();

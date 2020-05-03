@@ -37,14 +37,16 @@ export const usePlayer = () => {
     setPlayer(clonedPlayer);
   };
 
-  const updatePlayerPos = ({ x, y, collided }) => {
-    console.log(x, y, collided);
-    setPlayer((prev) => ({
-      ...prev,
-      pos: { x: (prev.pos.x += x), y: (prev.pos.y += y) },
-      collided,
-    }));
-  };
+  const updatePlayerPos = useCallback(
+    ({ x, y, collided }) => {
+      setPlayer((prev) => ({
+        ...prev,
+        pos: { x: (prev.pos.x += x), y: (prev.pos.y += y) },
+        collided,
+      }));
+    },
+    [setPlayer]
+  );
 
   const resetPlayer = useCallback(() => {
     setPlayer({
@@ -52,7 +54,6 @@ export const usePlayer = () => {
       tetromino: randomTetromino().shape,
       collided: false,
     });
-  }, []);
-
+  }, [setPlayer]);
   return [player, updatePlayerPos, resetPlayer, playerRotate];
 };
