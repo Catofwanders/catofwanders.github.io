@@ -12,5 +12,5 @@ export const StyledDisplay = styled.div`
   border-radius: 20px;
   color: ${({ gameOver }) => (gameOver ? "red" : "#999")};
   background: #000;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 `;
