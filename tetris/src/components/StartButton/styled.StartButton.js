@@ -9,7 +9,7 @@ export const StyledStartButton = styled.button`
   border: none;
   color: white;
   background: #333;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   outline: none;
   cursor: pointer;
 `;
